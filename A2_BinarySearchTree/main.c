@@ -28,5 +28,7 @@ int main() {
 
 	printf("Height of tree: %d\n", Height(HeadRoot));//print height of tree
 
+	FreeMem(HeadRoot);
+
 	return 0; 
 }

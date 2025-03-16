@@ -25,3 +25,5 @@ link Search(link HeadRoot, char* SearchKey);
 int Count(); //count nodes 
 
 int Height(link HeadRoot); //determine tree height 
+
+void FreeMem(link HeadRoot);

@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 #include <stdlib.h>
 
 #include "Tree.h"
@@ -85,3 +84,12 @@ int Height(link HeadRoot){ //determine tree height
 		return (RightH + 1); 
 	}
 } 
+
+void FreeMem(link HeadRoot) {
+	if (HeadRoot == NULL) {
+		return; 
+	}
+	FreeMem(HeadRoot->pLeft);
+	FreeMem(HeadRoot->pRight);
+	free(HeadRoot);
+}
